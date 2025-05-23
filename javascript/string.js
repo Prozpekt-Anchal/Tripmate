@@ -24,3 +24,18 @@ console.log(b.slice(1,5));
 
 console.log(b.replace("Ha", "22"));
 console.log(a.concat(b + "Anchal"))
+
+//****************************************************** */
+
+const names = new String('anchal thakur');
+const age = new String('21');
+
+console.log(`My name is ${names.toUpperCase()} and age is ${age}`);
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+const todaydate = new Date();
+console.log(todaydate.toDateString());
+console.log(todaydate.toISOString());
+console.log(todaydate.toLocaleDateString());
+console.log(todaydate.toLocaleString());
