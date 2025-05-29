@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TripMate - Ride Smarter</title>
+  <style>
+    :root {
+      --green: #2ecc71;
+      --blue: #2980b9;
+      --orange: #e67e22;
+      --light-gray: #f7f9f9;
+      --dark-gray: #2c3e50;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-gray);
+      color: var(--dark-gray);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: white;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: var(--green);
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: var(--dark-gray);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--green);
+    }
+
+    .hero {
+      background: white;
+      padding: 80px 20px;
+      text-align: center;
+      margin: 30px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      font-size: 1rem;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin: 10px;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background-color: var(--green);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #27ae60;
+    }
+
+    .btn-secondary {
+      background-color: var(--blue);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background-color: #2471a3;
+    }
+
+    h2.section-title {
+      text-align: center;
+      margin: 60px 0 30px;
+      font-size: 2rem;
+      color: var(--dark-gray);
+    }
+
+    .how-it-works, .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .step, .feature-card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      max-width: 280px;
+      flex: 1 1 240px;
+      text-align: center;
+    }
+
+    .step-number {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: var(--green);
+    }
+
+    .step-title, .feature-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .step-desc, .feature-desc {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: var(--orange);
+    }
+
+    .benefits {
+      background: white;
+      padding: 40px;
+      margin: 50px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 900px;
+    }
+
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .benefits li {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .benefits li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    footer {
+      background: var(--dark-gray);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: var(--green);
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header, nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="container">
+  <div>
+    <div class="logo">TripMate</div>
+    <div class="tagline">Smarter Rides, Greener Roads</div>
+  </div>
+  <nav>
+    <a href="#how">How it Works</a>
+    <a href="#features">Features</a>
+    <a href="#benefits">Benefits</a>
+  </nav>
+</header>
+
+<section class="hero container">
+  <h1>Turn Empty Seats into Shared Journeys</h1>
+  <p>Connect drivers and travelers. Save money, time, and the environment—one ride at a time.</p>
+  <a href="post-ride.html" class="btn btn-primary">Post a Ride</a>
+<a href="find-ride.html" class="btn btn-secondary">Find a Ride</a>
+
+</section>
+
+<section id="how" class="container">
+  <h2 class="section-title">How It Works</h2>
+  <div class="how-it-works">
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-title">Post Your Ride</div>
+      <div class="step-desc">Drivers can list their empty seats for upcoming trips.</div>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-title">Find & Book</div>
+      <div class="step-desc">Travelers search rides that match their schedule.</div>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-title">Travel & Share</div>
+      <div class="step-desc">Enjoy the ride together and reduce travel costs.</div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="container">
+  <h2 class="section-title">Key Features</h2>
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-icon">🎓</div>
+      <div class="feature-title">Student Discount</div>
+      <div class="feature-desc">Special fares to make travel easier for students.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌱</div>
+      <div class="feature-title">Plant a Tree</div>
+      <div class="feature-desc">We plant a tree after every 5 rides by a user.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💼</div>
+      <div class="feature-title">Subscriptions</div>
+      <div class="feature-desc">Monthly pass for regular intracity commuters.</div>
+    </div>
+  </div>
+</section>
+
+<section id="benefits" class="benefits container">
+  <h2 class="section-title">Why Choose TripMate?</h2>
+  <ul>
+    <li>Save money by sharing ride costs.</li>
+    <li>Comfort and convenience beyond public transport.</li>
+    <li>Non-stop rides, less time wasted in transfers.</li>
+    <li>Student-friendly pricing & verified users.</li>
+    <li>Earn rewards and plant trees for consistent use.</li
+    </ul>
+</section>
+
+<footer>
+  <p>Made with 💚 by TripMate. Reach us at <a href="mailto:support@tripmate.com">support@tripmate.com</a></p>
+  <p>
+    Follow us:
+    <a href="#">Instagram</a> |
+    <a href="#">Twitter</a> |
+    <a href="#">LinkedIn</a>
+  </p>
+  <p>&copy; 2025 TripMate</p>
+</footer>
+
+</body>
+</html>
