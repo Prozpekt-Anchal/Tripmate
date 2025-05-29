@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Ride - TripMate</title>
+  <style>
+    :root {
+      --green: #2ecc71;
+      --blue: #2980b9;
+      --orange: #e67e22;
+      --light-gray: #f7f9f9;
+      --dark-gray: #2c3e50;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-gray);
+      color: var(--dark-gray);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: white;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: var(--green);
+      margin-left: 20px;
+    }
+
+    nav a {
+      margin-right: 20px;
+      color: var(--dark-gray);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--green);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2rem;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      background: var(--green);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #27ae60;
+    }
+
+    footer {
+      background: var(--dark-gray);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: var(--green);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header class="container">
+  <div class="logo">TripMate</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Find a Ride</a>
+    <a href="#">Support</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Book a Ride</h1>
+  <form>
+    <label for="from">From</label>
+    <input type="text" id="from" name="from" placeholder="Enter departure city" required>
+
+    <label for="to">To</label>
+    <input type="text" id="to" name="to" placeholder="Enter destination city" required>
+
+    <label for="date">Travel Date</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="passengers">Number of Passengers</label>
+    <select id="passengers" name="passengers" required>
+      <option value="">Select passengers</option>
+      <option value="1">1 person</option>
+      <option value="2">2 people</option>
+      <option value="3">3 people</option>
+      <option value="4">4 people</option>
+    </select>
+
+    <label for="contact">Your Contact Number</label>
+    <input type="tel" id="contact" name="contact" placeholder="Enter mobile number" required>
+
+    <button type="submit" class="btn">Book Ride</button>
+  </form>
+</div>
+
+<footer>
+  <p>Made with 💚 by TripMate. Contact us at <a href="mailto:support@tripmate.com">support@tripmate.com</a></p>
+  <p>
+    Follow us:
+    <a href="#">Instagram</a> |
+    <a href="#">Twitter</a> |
+    <a href="#">LinkedIn</a>
+  </p>
+  <p>&copy; 2025 TripMate</p>
+</footer>
+
+</body>
+</html>
